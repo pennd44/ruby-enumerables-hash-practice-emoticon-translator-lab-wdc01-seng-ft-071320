@@ -18,7 +18,7 @@ def get_japanese_emoticon (file, emoticon)
   # code goes here
   new_emoticon_hash=load_library(file)
   japanese_emoticon=""
-  new_emoticon_hash.each do |key|
+  new_emoticon_hash.each do |key, value|
     if new_emoticon_hash[key][:english]==emoticon
       japanese_emoticon=new_emoticon_hash[key][:japanese]
     end
@@ -30,7 +30,7 @@ def get_english_meaning(file, emoticon)
   # code goes here
   new_emoticon_hash=load_library(file)
   english_meaning=""
-  new_emoticon_hash.each do |key|
+  new_emoticon_hash.each do |key, value|
     if new_emoticon_hash[key][:japanese]==emoticon
       english_meaning=key
     end
