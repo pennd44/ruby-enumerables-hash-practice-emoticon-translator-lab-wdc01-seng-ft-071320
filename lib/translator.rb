@@ -29,7 +29,7 @@ end
 def get_english_meaning(file, emoticon)
   # code goes here
   new_emoticon_hash=load_library(file)
-  english_meaning=""
+  english_meaning="Sorry, that emoticon was not found"
   new_emoticon_hash.each do |key, value|
     if new_emoticon_hash[key][:japanese]==emoticon
       english_meaning=key
